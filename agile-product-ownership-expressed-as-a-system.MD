@@ -26,7 +26,7 @@ Here are some examples of manual listeners
 
 There’s also a listener that’s built into the code repository. This one is more in your face because when it goes of you have to do something and there is no job management part of it at all. This is the “front line”. I call these auto listeners because they almost always do what you want them to (except when they don’t which is a topic for another presenter). Here are example auto listeners: 
 
-* tests run my a CI system 
+* tests run by a CI system 
 * pager duty on infrastructure
 
 When a request comes in it gets processed by a listener. The listener might correct the issue immediately or it might creates a job in the queue attached to the right team. 
@@ -102,7 +102,7 @@ If stories are frequently running unexpectedly long there’s a good chance ther
 A big factor of making these changes is understanding how your machine is running. If something is amiss you can usually tell. Having a balanced team approach means everyone is helping the various functions be successful because we all can empathize with what it’s like to do those jobs. Spend less time trying to coordinate across the functions and have empathy when working across each team. 
 
 
-Did I miss something? Yes, definitely. Nothing in humanity can be that easily bucketed. And that’s a great reason why being a balanced team is so important. While we are specialized in why we were hired and we may enjoy one of those 
+Did I miss something? Yes, definitely. Nothing in humanity can be that easily bucketed. And that’s a great reason why being a balanced team is so important. While we are specialized in why we were hired and we may find we become more effective in our hired job if we learn about the other jobs.
 
 There are a few calls to action i’d encourage you to do.
 
