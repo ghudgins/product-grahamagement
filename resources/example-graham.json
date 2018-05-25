@@ -1,0 +1,15 @@
+"graham":{ 
+	"jobManager.calculateMinorPriority":"10%",
+	"jobManager.requestInformation":"5%",
+	"manualListner.listen":"30%",
+	"unplannedWork.fixes":"<1%",
+	"unplannedWork.improvemnets":"5%",
+	"unplannedWork.bonus":"5%",
+	"plannedWork.design":"5%",
+	"plannedWork.sequencing":"25%",
+	"plannedWork.development":"5%",
+	"business.interface":"5%",
+	"business.calculateMajorPriority":"5%"
+}
+
+
