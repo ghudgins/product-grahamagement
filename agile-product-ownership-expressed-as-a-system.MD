@@ -72,6 +72,7 @@ As a generalized worker you can…
 If you are on a team, think about how much time you spend on each of these jobs. 
 
 Here is an example for me
+
 ![my example breakdown](https://github.com/ghudgins/product-grahamagement/blob/master/resources/example-graham-json.png?raw=true)
 
 
