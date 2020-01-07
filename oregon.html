@@ -1,0 +1,296 @@
+
+<html>
+  <head>    
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Heebo" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <style>
+    h5 {
+        display: inline;
+        font-weight: bold;
+    }
+
+    .data-value {
+        font-size: 48px;
+        font-family: "Heebo";
+    }
+
+    .description {
+        font-family: "Roboto";
+        font-size: 14px;
+    }
+
+    .animation {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .wrapper {
+        width: 80%;
+        padding: 4%;
+        margin: 20px auto;
+        margin-top: 0px;
+        background: #fff;
+    }
+
+    .wrapper.cards {
+        background: 0;
+        width: 88%;
+        padding: 20px 0 0 0;
+    }
+
+    .container {
+        position: relative;
+        width: 48%;
+        width: 300px;
+        height: 465px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+
+        /* Set the depth of the elements */
+        -webkit-perspective: 800px;
+        -moz-perspective: 800px;
+        -o-perspective: 800px;
+        perspective: 800px;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        cursor: pointer;
+
+        /* Set the transition effects */
+        -webkit-transition: -webkit-transform 0.4s;
+        -moz-transition: -moz-transform 0.4s;
+        -o-transition: -o-transform 0.4s;
+        transition: transform 0.4s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+    .card.flipped {
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+    }
+
+    .card .front,
+    .card .back {
+        display: block;
+        height: 100%;
+        width: 100%;
+        color: #444444;
+        text-align: center;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+        box-shadow: 1px 3px 10px #dddddd;
+        border: 1px solid #dddddd;
+    }
+
+    .card .back {
+        padding: 15px;
+        text-align: left;
+        color: #666666;
+    }
+
+    .card .front {
+        background: #ffffff;
+    }
+
+    .card .header {
+        font-size: 18px;
+        font-family: "Roboto Condensed" !important;
+        height: 75px;
+        margin-top: 15px;
+    }
+
+    .card .data-value {
+        height: 100px;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .card .decription {
+        font-size: 12px;
+        font-family: "Roboto Condensed" !important;
+        height: 45px;
+    }
+
+    .card .back {
+        background: #ffffff;
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+    }
+    .button {
+            height: 20px;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            opacity: .5;
+        }
+        .button-2 {
+            height: 30px;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            opacity: .5;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper cards">
+            <div class="container">
+                <div class="card">
+                    <div class="front">
+                            <div class="header">Fatal crashes by mode</div>
+                            <div id="pieChart"></div>
+                            <div id="legend"></div>
+                        <img class="button" src="https://drcqawa.oregonmetro.gov/btn/assets/icons/noun_info.svg">
+                    </div>
+                    <div class="back">
+                        <div class="content">
+                            <p><h5>Source</h5><br><i>Oregon Department of Transportation Serious Crashes</i></p>
+                            <p><h5>Geography</h5><br><i>Clackamas, Multnomah and Washington counties</i></p>
+                            <p><h5>Time period</h5><br><i> 2007 - 2017</i></p>
+                        </div>
+                        <img class="button-2" src="https://drcqawa.oregonmetro.gov/btn/assets/icons/noun-flip-over.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+  </body>
+  <script type="text/javascript">
+
+    $('.card').click(function() {
+        $(this).toggleClass('flipped');
+    });
+
+    var margin = {
+        left: 30,
+        right: 30,
+        top: 20,
+        bottom: 10
+    };
+
+    var w = d3.select(".card").style("width").slice(0 ,-2) - margin.left - margin.right,
+        h = d3.select(".card").style("width").slice(0 ,-2) / 1.25 - margin.top - margin.bottom,
+        r = h/2 - 30; //-1 to account for border which is .5 px
+        rLabel = h/2 - 15;
+    
+    var legendText = ["People in cars", "Pedestrians", "People on bikes"];
+
+    var legendColor = d3.scale.ordinal().range(["#dddddd","#5D70BB", "#B3C2FF"]),
+        textColor = d3.scale.ordinal().range(["#444444", "#f8f8f8"]);
+        color = d3.scale.ordinal().range(["#dddddd","#5D70BB", "#B3C2FF"]);
+
+    var f = d3.format(",%");
+
+    d3.csv("data.csv", function(error, data) {
+        
+        var svg = d3.select("#pieChart")
+          .append("svg:svg")
+          .data([data])
+            .attr("width", w)
+            .attr("height", h)
+          .append("svg:g")
+            .attr("transform", "translate(" + (w/2) + "," + h/2 + ")");
+
+        var legend = d3.select("#legend")
+            .append("svg:svg")
+            .attr("width", w)
+            .attr("height", 125)
+            .append("svg:g");
+
+        var arc = d3.svg.arc()
+            .outerRadius(r)
+            .innerRadius(r * .33);
+
+        var pie = d3.layout.pie()
+            .value(function(d) { return d.value; });
+
+        var arcs = svg.selectAll("g.slice")
+            .data(pie)
+            .enter().append("svg:g")
+            .attr("class", "slice")
+            .attr("transform", "translate(" + 0 + "," + 0 + ")");
+
+        arcs.append("svg:path")
+            .attr("fill", function(d, i) { return color(i); } )
+            .attr("stroke", "#ffffff")
+            .attr("stroke-width", 1.5)
+            .attr("d", arc);
+
+        arcs.append("text")
+            .attr("text-anchor", "middle")
+            .attr("font-family", "Roboto Condensed")
+            .attr("x", function(d) {
+                var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                d.cx = Math.cos(a) * (r - 30);
+                return d.x = Math.cos(a) * (r + 50);
+            })
+            .attr("y", function(d) {
+                var a = d.startAngle + (d.endAngle - d.startAngle)/2 - Math.PI/2;
+                d.cy = Math.sin(a) * (r - 15);
+                return d.y = Math.sin(a) * (r + 15);
+            })
+            .text(function(d) { return d.data.value * 100 + "%";  })
+            .each(function(d) {
+                var bbox = this.getBBox();
+                d.sx = d.x - bbox.width/2;
+                d.ox = d.x + bbox.width/2;
+                d.sy = d.oy = d.y + 4;
+            });
+        
+        arcs.append("path")
+            .attr("class", "pointer")
+            .style("fill", "none")
+            .style("stroke", "#444")
+            .style("stroke-width", 0.5)
+            .attr("d", function(d) {
+                if (d.cx >= d.ox) {
+                    return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx + "," + d.cy;
+                } else {
+                    return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx + "," + d.cy;
+                }
+            })
+        
+        legend.selectAll(".legendItem")
+            .data(pie(data))
+          .enter().append("rect")
+            .attr("class", function(d, i) {return "rect" + data[i].value * 100})
+            .attr("height", 18)
+            .attr("width", 18)
+            .attr("x", 1)
+            .attr("y", function(d, i) { return (i * 18) + (i * 5) + 45}) // half negative height + rectangle height + 5px spacer
+            .attr("fill", function(d, i) {return legendColor(i)});
+
+        legend.selectAll(".legendText")
+            .data(legendText)
+          .enter().append("text")
+            .attr("x", 30)
+            .attr("y", function(d, i) {return (i * 18) + (i * 5) + 57})
+            .attr("text-anchor", "start")
+            .attr("font-size", "14px")
+            .attr("font-family", "Roboto")
+            .text(function(d, i) {return legendText[i] + ": " + data[i].value * 100 + "%"});
+    });
+
+    </script>
+</html>
