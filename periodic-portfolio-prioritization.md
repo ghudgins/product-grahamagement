@@ -22,7 +22,7 @@ A porfolio epic is either
  - an expansion to the application's domain model
  - a renovation / reimagination of existing functionality that effects multiple features spanning multiple quarters
 
-In my evaluation good porfolio epics we hvae today are:
+In my evaluation good porfolio epics we have today are:
  - _Expansion example_: "Individual & Team Workspaces" 
  - _Renovation exmaple_: "Hub content have enhanced views"
 
@@ -66,7 +66,7 @@ Once you have the epics you want to evaluate against each other, it's time to di
 
 1) Select the customers that are representative of existing and potential markets
 2) Evaluate the research you have to determine how those customers feel about each of those portfolio epics
-3) Mark your findings somewhere (dovetail or powerpoint)
+3) Mark your findings somewhere (dovetail or excel...some suggestions below)
 4) Blend in priorities not reflected through traditional research methods. Determine how much voting power / weight those extra priorities will have
 
 For this I suggest a spreadsheet so you can quantify qualitative data. Dovetail itself can do this via the tagging & charting for the research that is in dovetail already...but because we may be evaluating priorities we don't have data for it might be useful to pull the data out.
@@ -79,13 +79,13 @@ Here is how I have done it in the past
 
 The review should outline the efforts along the way and what got to this step. After review have everyone open the spreadsheet and take a look at the results. Focus the review around these questions:
 
- - Is there a customer not being represented in this prioritization (i.e. have we thought only about civic/local governments and abandoned private non-profits and commercial companies as we sometimes do)
- - Is there a portfolio that is missing that should be represneted here (for this - I would exclude technology projects)
+ - Is there a customer not being represented in this prioritization (i.e. have we thought only about civic/local governments and not represented non-profits and commercial companies)
+ - Is there a portfolio that is missing that should be represented here (for this - I would exclude technology projects)
  - Given the estimated amount of capacity, how many additional strategies can the team support? Do we agree with the capacity statments at this & next quarter? 
 
  The beauty of doing any adjustments is with enough excel conditional formatting and formulas it's not hard to make edits on the fly. 
 
- **ACTION: Meet and review the results. Get closer to selecting new strategies and re-enforce existing strategies. Then do normal quarterly planning with this existing context**
+ **ACTION: Meet and review the results. Selecting new strategies based on hybrid research/business prioritization. Re-enforce existing strategies. Do normal quarterly planning with this renewed context**
 
 ### Disclaimer
 
