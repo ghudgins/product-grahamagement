@@ -1,4 +1,4 @@
-# Strategic Planning When Fully Remote
+# Periodic Strategic Planning
 
 ### Introduction / problem statement
 
