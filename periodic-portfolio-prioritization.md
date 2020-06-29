@@ -73,7 +73,7 @@ For this I suggest a spreadsheet so you can quantify qualitative data. Dovetail 
 
 Here is how I have done it in the past
 
-<img src="./example-research-priority-matrix.png" alt="example research matrix image"></img>
+<img src="./resources/example-research-priority-matrix.png" alt="example research matrix image"></img>
 
 ### Part III: Review findings and approach with product leaders. 
 
