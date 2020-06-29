@@ -42,7 +42,7 @@ Prepare yourself for coming up with high level directions the product can take. 
 
 * Review existing portfolio epics
 * Review dovetail tags charts and add missing portfolios bundling similar existing needs
-* Review competitive analysis / market analysis / gut feels for where the product should go that isn't reflected by the users we have and make sure these are represnted
+* Review competitive analysis / market analysis / gut feels for where the product should go that isn't reflected by the users we have and make sure these are represented
 
 Come up with the shortest representation/titles possible for these strategies. The details will come later. They will be easier to sort and work with if they can be expressed simply.
 
@@ -52,7 +52,7 @@ Come up with the shortest representation/titles possible for these strategies. T
 
 We don't need a portfolio epic for everything that's happening. We can account for it in a different way: Leveraging a domain model or other diagram representing the existing product and mark the resources (# developers) that are/will be supporting existing functionality in the next quarter. These can be planned using the normal quarterly planning approach via epics (_planning 3-6 months ahead for those via. epics_). This is where we can turn our attention to the level of granularity in each of those areas with resources attached (_what is the next big thing for ____ feature based on our research_)
 
-With this in mind, how much of the team's capacity is free now? How much of the capacity is free in 3 months? Which areas of the product will continue to hold our team's attention for the next several quarters vs. predicted to wrap up. Things that wrap these are usually major projects that conclude this/next quarter or features that are mature enough to stop progress on)
+With this in mind, how much of the team's capacity is free now? How much of the capacity is free in 3 months? Which areas of the product will continue to hold our team's attention for the next several quarters vs. predicted to wrap up. Things that wrap these are usually major projects that conclude this/next quarter or features that are mature enough to stop progress on
 
 **ACTION: Come away from this step with a percent time available for new strategies**
 
