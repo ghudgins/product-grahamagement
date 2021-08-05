@@ -24,7 +24,7 @@ A porfolio epic is either
 
 In my evaluation good porfolio epics we have today are:
  - _Expansion example_: "Individual & Team Workspaces" 
- - _Renovation exmaple_: "Hub content have enhanced views"
+ - _Renovation exmaple_: "{Product} content have enhanced views"
 
 Portfolio epics that could use "elevation" (they're too epic-y) are:
  - "Content Search with Collections and Maps"
@@ -87,6 +87,4 @@ The review should outline the efforts along the way and what got to this step. A
 
  **ACTION: Meet and review the results. Selecting new strategies based on hybrid research/business prioritization. Re-enforce existing strategies. Do normal quarterly planning with this renewed context**
 
-### Disclaimer
 
-....or not. I believe strongly that we should try things then revisit this approach to see how we can improve the way we make decisions.
