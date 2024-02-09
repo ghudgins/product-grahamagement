@@ -6,3 +6,7 @@
 * [Agile and balanced team dynamics expressed as a system](https://github.com/ghudgins/product-grahamagement/blob/master/agile-product-ownership-expressed-as-a-system.MD)
 * [Periodic portfolio priortization](https://github.com/ghudgins/product-grahamagement/blob/master/periodic-portfolio-prioritization.md)
 * [Approach is everything](https://github.com/ghudgins/product-grahamagement/blob/master/approach-is-everything.md)
+
+## Resources
+
+* [Agile product ownership in a nutshell](https://www.youtube.com/watch?v=502ILHjX9EE)
