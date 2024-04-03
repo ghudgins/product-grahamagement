@@ -9,11 +9,11 @@ It actually shouldn’t be too hard these days given how many jobs have been aut
 
 Back to the team—a team as a system with inputs and outputs, functions, jobs, etc. The system exists to perform one job that no other system does...products or code in a repository. While teams do a lot of activities the purpose of the other activities are to support the primary one. This isn’t to say that secondary actions aren’t important but for the sake of simplicity let’s just think about the team as producing, at the end of a process, features that customers will use in some technology platform. 
 
-![team ships code](https://github.com/ghudgins/product-grahamagement/blob/master/resources/team-ships-code.png?raw=true)
+![team ships code](https://github.com/ghudgins/product-grahamagement/blob/main/resources/team-ships-code.png?raw=true)
 
 If the output of our team is code in a repository then what are the inputs to this work? Let’s look at this. A team functions by fielding requests. Some requests are good/constructive. Sound requests are bad experiences like a broken or confusing feature...some requests come from your terminal as a developer. At a very high level there are two types of requests I choose to use for today’s discussion - requests fielded manually and requests fielded automatically.
 
-![fields request](https://github.com/ghudgins/product-grahamagement/blob/master/resources/fields-request.png?raw=true)
+![fields request](https://github.com/ghudgins/product-grahamagement/blob/main/resources/fields-request.png?raw=true)
 
 Fielding a request is the first example of of job - If we are software then we have conditions that weigh “is this something that can be fixed with code change”. We also have a process to separate the issues that need immediate attention vs. would-be requests into future planned work. This process is an manual event driven listener. 
 
@@ -31,11 +31,11 @@ There’s also a listener that’s built into the code repository. This one is m
 
 When a request comes in it gets processed by a listener. The listener might correct the issue immediately or it might creates a job in the queue attached to the right team. 
 
-![listening and queue](https://github.com/ghudgins/product-grahamagement/blob/master/resources/listening-and-queue.png?raw=true)
+![listening and queue](https://github.com/ghudgins/product-grahamagement/blob/main/resources/listening-and-queue.png?raw=true)
 
 Most work is run out of a queue....especially the work that requires multiple changes and the tracking of multiple scenarios. Each team has a queue which is groomed and kept current by a job manager. This is our second job. The job manager can also reports the order of the jobs and the status at any time. That is how work enters the queue: A listener of some variety creates a job and the job manager might adjust its position in the queue. 
 
-![job manager](https://github.com/ghudgins/product-grahamagement/blob/master/resources/jobmanager.png?raw=true)
+![job manager](https://github.com/ghudgins/product-grahamagement/blob/main/resources/jobmanager.png?raw=true)
 
 For our next two jobs we have doing work—design, development, product, or otherwise. When a worker comes free, that worker might do any of the jobs mentioned or two new types of jobs--Planned work from the jobs queue or unplanned work (sometimes also from the job queue that was added moments ago). Most workers plan on time to do both types of work no matter what the function. 
 
@@ -47,11 +47,11 @@ Unplanned work usually comes up due to priority or a built-in function of contin
 * re-factor and upgrade 3 -> 1 services doing the same thing; ui consistency pattern update; dependency upgrade;  
 * workers will periodically produce things without the job system 20% time, side projects, other jobs, prototypes
 
-![planned and unplanned work](https://github.com/ghudgins/product-grahamagement/blob/master/resources/planned-unplanned-work.png?raw=true)
+![planned and unplanned work](https://github.com/ghudgins/product-grahamagement/blob/main/resources/planned-unplanned-work.png?raw=true)
 
 Periodically (every 1-2 weeks) the job manager interfaces with a team focused on determining priority (which is our last type of job on the list). This service results in an updated job priority list and can also create new jobs. This also serves to rebalance work across the teams for complex delivery requiring multiple teams. Every 3 months the same team decides on more significant strategy feature sets.
 
-![business](https://github.com/ghudgins/product-grahamagement/blob/master/resources/business.png?raw=true)
+![business](https://github.com/ghudgins/product-grahamagement/blob/main/resources/business.png?raw=true)
 
 Having walked through how a team gets work, how it works on things, and how priorities are set we now have our list of jobs. 
 
