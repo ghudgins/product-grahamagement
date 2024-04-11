@@ -74,7 +74,7 @@ If you are on a team, think about how much time you spend on each of these jobs.
 
 Here is an example for me
 
-![my example breakdown](https://github.com/ghudgins/product-grahamagement/blob/master/resources/example-graham-json.png?raw=true)
+![my example breakdown](https://github.com/ghudgins/product-grahamagement/blob/main/resources/example-graham-json.png?raw=true)
 
 
 
@@ -113,4 +113,4 @@ Calls to action:
 
 Thanks for reading
 
-![final](https://github.com/ghudgins/product-grahamagement/blob/master/resources/final.png?raw=true)
+![final](https://github.com/ghudgins/product-grahamagement/blob/main/resources/final.png?raw=true)
